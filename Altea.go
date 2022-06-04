@@ -5,6 +5,7 @@ import (
 	"Altea/services/FileService"
 	"Altea/services/managers"
 	"github.com/gin-gonic/gin"
+	"log"
 )
 
 func main() {
@@ -17,7 +18,9 @@ func main() {
 
 	fm := managers.NewFileManager(&fs)
 	projectRouter.FileRouter(router, fm)
-	if err := router.Run(":9000"); err != nil {
+	host := "0.0.0.0:9000"
+	log.Println("starting to listen to " + host)
+	if err := router.Run(host); err != nil {
 		panic(err)
 	}
 

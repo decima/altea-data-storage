@@ -27,3 +27,4 @@ GET http://localhost:9000/files/a/b/c/d.txt
 GET http://localhost:9000/files/
 ###
 
+DELETE http://localhost:9000/files/
