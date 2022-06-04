@@ -1,0 +1,29 @@
+PUT http://localhost:9000/files/a/b/c/d.txt
+
+Oh, hello there. it works2
+
+###
+PUT http://localhost:9000/files/a/b/c/e.txt
+
+Oh, hello there. It's me. Henri.
+###
+GET http://localhost:9000/files/a/b/c
+###
+GET http://localhost:9000/files/a/b/c/e.txt
+###
+DELETE http://localhost:9000/files/a/b/c/e.txt
+###
+GET http://localhost:9000/files/a/b/c/e.txt
+###
+GET http://localhost:9000/files/a
+###
+DELETE http://localhost:9000/files/a
+###
+GET http://localhost:9000/files/a
+###
+GET http://localhost:9000/files/a/b/c/d.txt
+###
+
+GET http://localhost:9000/files/
+###
+
