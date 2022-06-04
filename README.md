@@ -5,7 +5,6 @@ A simple API for file storage.
 ## Requirements
 - go 1.18
 
-
 ## todo
 - Make app configurable
   - host&port (currently 0.0.0.0:9000)
@@ -25,3 +24,6 @@ Write the content of the body for the given path
 
 ### `DELETE /files/{path}`
 Delete file/directory recursively
+
+## defaults
+Serves the public folder at the root of the project.

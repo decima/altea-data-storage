@@ -4,6 +4,7 @@ go 1.18
 
 require (
 	github.com/aws/aws-sdk-go v1.44.27
+	github.com/gin-contrib/static v0.0.1
 	github.com/gin-gonic/gin v1.7.7
 )
 

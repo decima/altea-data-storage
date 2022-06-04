@@ -4,6 +4,7 @@ import (
 	projectRouter "Altea/http/router"
 	"Altea/services/FileService"
 	"Altea/services/managers"
+	"github.com/gin-contrib/static"
 	"github.com/gin-gonic/gin"
 	"log"
 )
@@ -20,6 +21,9 @@ func main() {
 	projectRouter.FileRouter(router, fm)
 	host := "0.0.0.0:9000"
 	log.Println("starting to listen to " + host)
+
+	router.Use(static.Serve("/", static.LocalFile("./public", true)))
+
 	if err := router.Run(host); err != nil {
 		panic(err)
 	}
